@@ -1,4 +1,4 @@
-script_key="KEY_HERE";
+script_key="Key";
 getgenv().script_key = script_key;
 getgenv().Intro = {
     ["IntroBlur"] = true,
@@ -16,8 +16,8 @@ getgenv().hojixv = {
         ["AirPart"] = "Head", 
         ["ClosestPart"] = false, 
         ["CenterPart"] = false,
-        ["ClosetPoint"] = false,
-
+        ["ClosetPoint"] = false, 
+        
         ["WhitelistedParts"] = {"HumanoidRootPart"},
 
         ["AutoPrediction"] = 1, -- type of math
@@ -41,7 +41,11 @@ getgenv().hojixv = {
         ["ToggleKey"] = "p", 
 
         ["UseCustomPrediction"] = true, 
-        ["CustomPrediction"] = {["X"] = 0.138, ["Y"] = 0.128, ["Z"] = 0.138}, 
+        ["CustomPrediction"] = {
+            ["X"] = 0.138, 
+            ["Y"] = 0.128, 
+            ["Z"] = 0.138
+        }, 
 
         ["UseFactors"] = false,
         ["Factors"] = 1, -- 1, 2, 3
@@ -101,7 +105,7 @@ getgenv().hojixv = {
     }, 
     Scaling = {
         ["UseScaling"] = false,
-        ["Transform"] = "PlayerPostion",
+        ["Transform"] = "PlayerPostion", 
     },
     Properties = {
         ["UseRangeCoefficient"] = false,
@@ -111,6 +115,13 @@ getgenv().hojixv = {
         ["UseCursorHitPart"] = false,
         ["Intervals"] = 0.122,
         ["Precision"] = 2,
+    },
+    Conditions = {
+        ["Formula"] = "S*",
+        ["BasePart"] = "", -- HumanoidRootPart
+        ["AutoDetection"] = false,
+        ["UseAutoDetection"] = true,
+        ["ManualDetection"] = 50, 
     },
     Resolver = {
         ["Enabled"] = true,
@@ -142,7 +153,7 @@ getgenv().hojixv = {
         ["AnglePower"] = 1, -- Power For Angle Basically
 
         ["UsePredictionPoints"] = false,
-        ["PredictionPoints"] = 5, -- 
+        ["PredictionPoints"] = 5, 
         ["PointAdjustment"] = 0.1,
 
         ["UseAirPoints"] = false,
@@ -157,7 +168,8 @@ getgenv().hojixv = {
         ["UseSafeFov"] = false,
 
         ["VisibleTarget"] = true,
-        ["NearestCusor"] = false,
+        ["NearestCursor"] = false, 
+    },
 
     Global = {
         ["UseChecks"] = true,
@@ -165,10 +177,16 @@ getgenv().hojixv = {
         ["FieldOfView"] = "Sticky",
         ["SelfDetection"] = false,
         ["UseGlobalAxis"] = false,
+    },
 
-        }
+    UnSafe = {
+        ["AllowArgs"] = false,
+        ["AllowRead"] = true,
+        ["AllowHwidExecution"] = false,
+        ["AllowChange"] = false,
     },
 }
+
 
 Bruh = {
     ["Key"] = Enum.KeyCode.C,
@@ -222,14 +240,6 @@ CustomShakeAir = {
     ["AirY"] = 1,
 }
 
-Checks = {
-    ["hojixvgayassdontwannagetcaught"] = false,
-    ["KoCheck"] = false,
-    ["ResolverKey"] = Enum.KeyCode.G,
-    ["UnlockOnTargetDeath"] = true,
-    ["UnlockOnOwnDeath"] = true,
-}
-
 Global_Check = {
     ["UseGlobal"] = false,
     ["Ko_Check"] = false,
@@ -242,6 +252,15 @@ Global_Check = {
     ["CrewCheck"] = false,
     ["TeamCheck"] = false,
 }
+
+Checks = {
+    ["hojixvgayassdontwannagetcaught"] = false,
+    ["KoCheck"] = false,
+    ["ResolverKey"] = Enum.KeyCode.G,
+    ["UnlockOnTargetDeath"] = true,
+    ["UnlockOnOwnDeath"] = true,
+}
+
 
 Offset_Type = {
     ["X"] = 0.11,
