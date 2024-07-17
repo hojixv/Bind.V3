@@ -1,4 +1,4 @@
-script_key="Key";
+script_key="KEY";
 getgenv().script_key = script_key;
 getgenv().Intro = {
     ["IntroBlur"] = true,
@@ -189,7 +189,7 @@ getgenv().hojixv = {
 
 
 Bruh = {
-    ["Key"] = Enum.KeyCode.C,
+    ["Key"] = "C",
     ["Part"] = "Head",
     ["PredictionY"] = 0.1255,
     ["PredictionX"] = 0.1255,
@@ -256,7 +256,7 @@ Global_Check = {
 Checks = {
     ["hojixvgayassdontwannagetcaught"] = false,
     ["KoCheck"] = false,
-    ["ResolverKey"] = Enum.KeyCode.G,
+    ["ResolverKey"] = "G",
     ["UnlockOnTargetDeath"] = true,
     ["UnlockOnOwnDeath"] = true,
 }
@@ -270,12 +270,16 @@ Offset_Type = {
     ["Jumping"] = false,
 }
 
-Spin = {
-    ["Enabled"] = false,
-    ["RotationSpeed"] = 2500, 
+DynamicSpin = {
+    ["Enabled"] = true,
+    ["UseMultiple"] = false,
+    ["Multiplied"] = 1,
+    ["RotationSpeed"] = 2500,
+    ["Keybind"] = "M", 
+    ["Multiple"] = false,
     ["UseDynamicSpeedSpin"] = false,
-    ["DynamicSpeedSpin"] = 0.1,
-    ["Keybind"] = Enum.KeyCode.V,
+    ["DynamicSpeedSpin"] = 0,
+    ["math.pi"] = 2,
 }
 
 DottedFOV = {
@@ -361,5 +365,6 @@ hojixvvv = {
         ["Color"] = Color3.fromRGB(255, 255, 255),
     }
 }
+
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/9449eab17b79d158aa90c0e69f640e19.lua"))()
