@@ -87,7 +87,7 @@ getgenv().hojixv = {
         ["Radius"] = 300, 
         ["Transparency"] = 1, 
         ["Thickness"] = 1, 
-        ["Color"] = Color3.fromRGB(0, 0, 255),
+        ["Color"] = Color3.fromRGB(50, 160, 168),
     },
     Type = {
         ["VisibleIfTarget"] = false,
