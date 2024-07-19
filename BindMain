@@ -1,11 +1,26 @@
 script_key="KEY";
 getgenv().script_key = script_key;
+
 getgenv().Intro = {
     ["IntroBlur"] = true,
 }
 
 getgenv().Watermark = {
     ["Enable"] = true,
+}
+
+getgenv().Universal = {
+    Detections = {
+        ["UniversalKeyBind"] = "G",
+        ["Universal"] = false, 
+        ["Axis"] = false,
+        ["AntiAim"] = false,
+        ["Desync"] = false,
+        ["Movement"] = false,
+        ["Sky"] = false,
+        ["UnderGround"] = false,
+        ["Model"] = false,
+    }
 }
 
 getgenv().hojixv = {
@@ -35,16 +50,16 @@ getgenv().hojixv = {
         ["UseAntiGroundShot"] = false,
         ["AntiGroundShotValue"] = 5, -- Up to 10
         
-        ["Prediction"] = 0.1267, 
+        ["Prediction"] = 0.1256, 
         ["HitChance"] = 100, 
         ["UseToggleKey"] = true, 
         ["ToggleKey"] = "p", 
 
         ["UseCustomPrediction"] = true, 
         ["CustomPrediction"] = {
-            ["X"] = 0.138, 
-            ["Y"] = 0.128, 
-            ["Z"] = 0.138
+            ["X"] = 0.125, 
+            ["Y"] = 0.1255, 
+            ["Z"] = 0.1325
         }, 
 
         ["UseFactors"] = false,
@@ -82,12 +97,12 @@ getgenv().hojixv = {
         ["UseCustomInterVals"] = false,
     },
     SilentFOV = {
-        ["Visible"] = true, 
+        ["Visible"] = false, 
         ["Filled"] = false, 
-        ["Radius"] = 300, 
+        ["Radius"] = 500, 
         ["Transparency"] = 1, 
         ["Thickness"] = 1, 
-        ["Color"] = Color3.fromRGB(50, 160, 168),
+        ["Color"] = Color3.fromRGB(0, 0, 255),
     },
     Type = {
         ["VisibleIfTarget"] = false,
@@ -187,19 +202,18 @@ getgenv().hojixv = {
     },
 }
 
-
 Bruh = {
     ["Key"] = "C",
     ["Part"] = "Head",
     ["PredictionY"] = 0.1255,
-    ["PredictionX"] = 0.1255,
-    ["Smoothing"] = 1,
+    ["PredictionX"] = 0.2255,
+    ["Smoothing"] = 0.3,
 
     ["AirPart"] = "Head",
     ["UseAirPart"] = false,
     ["BoundAdjustment"] = 2.50,
     ["CheckIfJumped"] = false,
-    ["ShakeValue"] = 1,
+    ["ShakeValue"] = 0.088,
 
     ["UseCustomShake"] = false,
     ["ShakeY"] = 0.1,
@@ -233,6 +247,35 @@ Bruh = {
     ["StaticZ"] = 1.2,
 }
 
+AirPrediction = {
+    ["AirPrediction"] = false,
+    ["AirPredictionX"] = 0.1,
+    ["AirPredictionY"] = 0.1,
+    ["AirPredictionZ"] = 0.1,
+}
+
+CustomGameAxis = {
+    ["UseGameAxis"] = false,
+    ["AxisValue"] = 1,
+    ["UseZ"] = false,
+    ["UseY"] = false,
+    ["UseZ"] = false,
+}
+
+CustomSmoothing = {
+    ["UseCustomSmoothing"] = false,
+    ["X"] = 0.2, 
+    ["Y"] = 0.2, 
+    ["Z"] = 0.2,
+}
+
+AirSmoothing = {
+    ["UseAirSmoothing"] = false,
+    ["X"] = 0.2, 
+    ["Y"] = 0.2, 
+    ["Z"] = 0.2,
+}
+
 CustomShakeAir = {
     ["Enabled"] = false,
     ["AirX"] = 1,
@@ -261,13 +304,14 @@ Checks = {
     ["UnlockOnOwnDeath"] = true,
 }
 
-
 Offset_Type = {
     ["X"] = 0.11,
     ["Y"] = 0.11,
     ["Z"] = 0.11,
     ["Landing"] = false,
     ["Jumping"] = false,
+    ["UseVectors"] = false,
+    ["OffsetKillType"] = Vector2.new(0,100,11),
 }
 
 DynamicSpin = {
@@ -280,6 +324,7 @@ DynamicSpin = {
     ["UseDynamicSpeedSpin"] = false,
     ["DynamicSpeedSpin"] = 0,
     ["math.pi"] = 2,
+
 }
 
 DottedFOV = {
