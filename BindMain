@@ -6,7 +6,16 @@ getgenv().Intro = {
 }
 
 getgenv().Watermark = {
-    ["Enable"] = true,
+    ["Enable"] = false,
+}
+
+getgenv().ConsoleCleaner = {
+    Cleaner = {
+        ["Enabled"] = true, 
+        ["KeyBind"] = "b", 
+        ["Delay"] = 0.01,
+        ["AutoOs"] = false, -- Clears console on injection
+    }
 }
 
 getgenv().Universal = {
@@ -50,7 +59,7 @@ getgenv().hojixv = {
         ["UseAntiGroundShot"] = false,
         ["AntiGroundShotValue"] = 5, -- Up to 10
         
-        ["Prediction"] = 0.1256, 
+        ["Prediction"] = 0.1255, 
         ["HitChance"] = 100, 
         ["UseToggleKey"] = true, 
         ["ToggleKey"] = "p", 
@@ -59,7 +68,7 @@ getgenv().hojixv = {
         ["CustomPrediction"] = {
             ["X"] = 0.125, 
             ["Y"] = 0.1255, 
-            ["Z"] = 0.1325
+            ["Z"] = 0.1225
         }, 
 
         ["UseFactors"] = false,
@@ -204,14 +213,14 @@ getgenv().hojixv = {
 
 Bruh = {
     ["Key"] = "C",
-    ["Part"] = "Head",
+    ["Part"] = "HumanoidRootPart",
     ["PredictionY"] = 0.1255,
-    ["PredictionX"] = 0.2255,
-    ["Smoothing"] = 0.3,
+    ["PredictionX"] = 0.3555,
+    ["Smoothing"] = 0.2,
 
     ["AirPart"] = "Head",
     ["UseAirPart"] = false,
-    ["BoundAdjustment"] = 2.50,
+    ["BoundAdjustment"] = -0.17,
     ["CheckIfJumped"] = false,
     ["ShakeValue"] = 0.088,
 
@@ -319,7 +328,7 @@ DynamicSpin = {
     ["UseMultiple"] = false,
     ["Multiplied"] = 1,
     ["RotationSpeed"] = 2500,
-    ["Keybind"] = "M", 
+    ["Keybind"] = "V", 
     ["Multiple"] = false,
     ["UseDynamicSpeedSpin"] = false,
     ["DynamicSpeedSpin"] = 0,
@@ -328,10 +337,10 @@ DynamicSpin = {
 }
 
 DottedFOV = {
-    ["ShowDots"] = false,
-    ["Rainbow"] = false,
+    ["ShowDots"] = true,
+    ["Rainbow"] = true,
     ["DotSize"] = 3,
-    ["Radius"] = 400,
+    ["Radius"] = 200,
     ["Color"] = Color3.fromRGB(80, 50, 168),
 }
 
@@ -411,5 +420,33 @@ hojixvvv = {
     }
 }
 
+Macro = {
+    ["Enabled"] = true,
+    ["Keybind"] = "n",
+    ["Speed"] = 1.5,
+    ["Default"] = false,
+    ["Hold"] = false,
+    ["Toggle"] = true,
+    ["XSpeed"] = false,
+    ["XSpeed1"] = 1,
+    ["Xspeed2"] = 2,
+    ["Version"] = "FirstPerson" -- // FirstPerson, ThirdPerson
+}
 
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/9449eab17b79d158aa90c0e69f640e19.lua"))()
+BindTrashTalk = {
+    ["Enabled"] = true,
+    ["Delay"] = 1,
+    ["UseTags"] = false,
+    ["FilterForNoBan"] = true, --// Always use plzplzplzpzlzpl
+    ["keybind"] = "V",
+    ["messages"] = {
+        "I love Bind",
+        "Wow Bind just sonned u",
+        "Bind > Stellar",
+        "Wow Bind js sonned u",
+        "Bind.lua is too good for u",
+        "Uh i heard this bind thing solos Shhhh",
+        "U Need Bind.lua",
+    }
+}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fe06ea78edd805d1bc34e1ede3bdb466.lua"))()
