@@ -449,4 +449,6 @@ BindTrashTalk = {
         "U Need Bind.lua",
     }
 }
+
+
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fe06ea78edd805d1bc34e1ede3bdb466.lua"))()
