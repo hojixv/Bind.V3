@@ -1,4 +1,4 @@
-script_key="RYswMRqxXaExHPxetgcMZmpYEZgTqrhe";
+script_key="Key";
 getgenv().script_key = script_key;
 getgenv().hojixv = hojixv_BindLua;
 
