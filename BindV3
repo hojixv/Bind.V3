@@ -106,9 +106,9 @@ getgenv().hojixv = {
         ["UseCustomInterVals"] = false,
     },
     SilentFOV = {
-        ["Visible"] = false, 
+        ["Visible"] = true, 
         ["Filled"] = false, 
-        ["Radius"] = 500, 
+        ["Radius"] = 100, 
         ["Transparency"] = 1, 
         ["Thickness"] = 1, 
         ["Color"] = Color3.fromRGB(0, 0, 255),
@@ -420,35 +420,21 @@ hojixvvv = {
     }
 }
 
-Macro = {
-    ["Enabled"] = true,
-    ["Keybind"] = "n",
-    ["Speed"] = 1.5,
-    ["Default"] = false,
-    ["Hold"] = false,
-    ["Toggle"] = true,
-    ["XSpeed"] = false,
-    ["XSpeed1"] = 1,
-    ["Xspeed2"] = 2,
-    ["Version"] = "FirstPerson" -- // FirstPerson, ThirdPerson
-}
-
 BindTrashTalk = {
     ["Enabled"] = true,
     ["Delay"] = 1,
     ["UseTags"] = false,
     ["FilterForNoBan"] = true, --// Always use plzplzplzpzlzpl
-    ["keybind"] = "V",
+    ["keybind"] = "y",
     ["messages"] = {
         "I love Bind",
         "Wow Bind just sonned u",
         "Bind > Stellar",
-        "Wow Bind js sonned u",
+        "Wow bind js sonned u",
         "Bind.lua is too good for u",
         "Uh i heard this bind thing solos Shhhh",
         "U Need Bind.lua",
     }
 }
-
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fe06ea78edd805d1bc34e1ede3bdb466.lua"))()
