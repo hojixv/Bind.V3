@@ -11,14 +11,14 @@ Watermark = {
 ConsoleCleaner = {
     Cleaner = {
         Enabled = true,
-        KeyBind = "b",
+        KeyBind = Enum.KeyCode.B,
         Delay = 0.01,
         AutoOs = false, -- Clears console on injection
     }
 }
 Universal = {
     Detections = {
-        UniversalKeyBind = "G",
+        UniversalKeyBind = Enum.KeyCode.G,
         Universal = false,
         Axis = false,
         AntiAim = false,
@@ -60,7 +60,7 @@ Bind = {
         Prediction = 0.1255,
         HitChance = 100,
         UseToggleKey = true,
-        ToggleKey = "p",
+        ToggleKey = Enum.KeyCode.P,
 
         UseCustomPrediction = true,
         CustomPrediction = {
@@ -80,15 +80,13 @@ Bind = {
         TracerColor = Color3.fromRGB(0, 0, 255),
         FreeForAllTracer = true, -- may cause lots of lag
 
-        SnapLines = false,  -- only works on electron
+        SnapLines = false, 
 
         UseCustomAngles = false,
         CustomAngle = "Pixel",
 
         UseAirShotHitChance = false,
         AirShotHitChance = 100,
-
-        KillPoint = "KillCheck",
     },
     Dynamic = {
         LeftRange = 10,
