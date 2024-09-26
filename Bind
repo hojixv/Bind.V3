@@ -1,19 +1,14 @@
-script_key="Key";
-getgenv().script_key = script_key;
-
-getgenv().Mode = {
+Mode = {
     Mode = "W", -- dont touch
+    script_key="Key"
 }
-
-getgenv().Intro = {
+Intro = {
     IntroBlur = true,
 }
-
-getgenv().Watermark = {
+Watermark = {
     Enable = false,
 }
-
-getgenv().ConsoleCleaner = {
+ConsoleCleaner = {
     Cleaner = {
         Enabled = true,
         KeyBind = "b",
@@ -21,8 +16,7 @@ getgenv().ConsoleCleaner = {
         AutoOs = false, -- Clears console on injection
     }
 }
-
-getgenv().Universal = {
+Universal = {
     Detections = {
         UniversalKeyBind = "G",
         Universal = false,
@@ -36,7 +30,7 @@ getgenv().Universal = {
     }
 }
 
-getgenv().hojixv = {
+Bind = {
     Silent = {
         Enabled = true,
         Part = "HumanoidRootPart",
@@ -215,8 +209,7 @@ getgenv().hojixv = {
     },
 }
 
-
-getgenv().hojixvreborn = {
+hojixvreborn = {
     KeyType = "E",
     Type = "Solara",
     Key = Enum.KeyCode.C,
@@ -267,50 +260,38 @@ getgenv().hojixvreborn = {
     StaticX = 1.2,
     StaticZ = 1.2,
 }
-
-
-getgenv().AirPrediction = {
+AirPrediction = {
     AirPrediction = false,
     AirPredictionX = 0.1,
     AirPredictionY = 0.1,
     AirPredictionZ = 0.1,
 }
-
-
-getgenv().CustomGameAxis = {
+CustomGameAxis = {
     UseGameAxis = false,
     AxisValue = 1,
     UseX = false,
     UseY = false,
     UseZ = false,
 }
-
-
-getgenv().CustomSmoothing = {
+CustomSmoothing = {
     UseCustomSmoothing = false,
     X = 0.2,
     Y = 0.2,
     Z = 0.2,
 }
-
-
-getgenv().AirSmoothing = {
+AirSmoothing = {
     UseAirSmoothing = false,
     X = 0.2,
     Y = 0.2,
     Z = 0.2,
 }
-
-
-getgenv().CustomShakeAir = {
+CustomShakeAir = {
     Enabled = false,
     AirX = 1,
     AirY = 1,
     AirZ = 1,
 }
-
-
-getgenv().Offset_Type = {
+Offset_Type = {
     X = 0.11,
     Y = 0.11,
     Z = 0.11,
@@ -319,9 +300,7 @@ getgenv().Offset_Type = {
     UseVectors = false,
     OffsetKillType = Vector2.new(0, 100),
 }
-
-
-getgenv().Global_Check = {
+Global_Check = {
     UseGlobal = false,
     Ko_Check = false,
     WallCheck = false,
@@ -333,9 +312,7 @@ getgenv().Global_Check = {
     CrewCheck = false,
     TeamCheck = false,
 }
-
-
-getgenv().ChecksV2 = {
+ChecksV2 = {
     KillCheckPoint = true,
     Unlocked = true,
     KoCheck = true,
@@ -344,9 +321,7 @@ getgenv().ChecksV2 = {
     CheckPoints = false,
     Visualize_Points = false
 }
-
-
-getgenv().Spin = {
+Spin = {
     Enabled = true,
     RotationSpeed = 100,
     Keybind = Enum.KeyCode.V,
@@ -355,29 +330,23 @@ getgenv().Spin = {
     DynamicSpeedSpin = 0,
     PiMultiplier = 2,
 }
-
-
-getgenv().DottedFOV = {
+DottedFOV = {
     ShowDots = true,
     Rainbow = true,
     DotSize = 3,
     Radius = 200,
     Color = Color3.fromRGB(80, 50, 168),
 }
-
-
-getgenv().hojixv3 = {
+hojixv3 = {
     Settings = {
         cframespeedtoggle = true,
-        KeyBind = "x",
+        KeyBind = Enum.KeyCode.X,
         speedvalue = 1,
         DynamicSpeed = 1,
         UseDynamicSpeed = false,
     }
 }
-
-
-getgenv().BruhImGeeked = {
+BruhImGeeked = {
     Esp = {
         Enabled = false,
         UseEspKeybind = true,
@@ -435,8 +404,7 @@ getgenv().BruhImGeeked = {
     }
 }
 
-
-getgenv().hojixvvv = {
+hojixvvv = {
     Texture = {
         Enabled = false,
         Material = Enum.Material.Brick,  -- Assuming Material is an Enum
@@ -444,9 +412,9 @@ getgenv().hojixvvv = {
     }
 }
 
-getgenv().Macro = {
+Macro = {
     Enabled = true,
-    Keybind = "n",
+    Keybind = Enum.KeyCode.Z,
     Speed = 1.5,
     Default = false,
     Hold = false,
@@ -457,13 +425,12 @@ getgenv().Macro = {
     Version = "FirstPerson" -- // FirstPerson, ThirdPerson
 }
 
-
-getgenv().BindTrashTalk = {
+BindTrashTalk = {
     Enabled = true,
     Delay = 1,
     UseTags = false,
     FilterForNoBan = true, -- Always use plzplzplzpzlzpl
-    keybind = "y",
+    keybind = Enum.KeyCode.B,
     messages = {
         "I love Bind",
         "Wow Bind just sonned u",
@@ -474,6 +441,5 @@ getgenv().BindTrashTalk = {
         "U Need Bind.lua",
     }
 }
-
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fe06ea78edd805d1bc34e1ede3bdb466.lua"))()
