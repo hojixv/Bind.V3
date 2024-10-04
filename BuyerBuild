@@ -1,10 +1,11 @@
 script_key='';
 getgenv()['Bindlua'] = {
     ['Options'] = { 
-        ['IntroBlur'] = true,
-        ['Notifications'] = true,
-        ['Global'] = false,
-    },
+        ['IntroBlur'] = true;
+        ['Notifications'] = true;
+        ['AutoUpdate'] = true;
+        ['Global'] = false;
+    };
     ['Bind'] = {
         ['Mode'] = 'Advance'; -- Options: Optimized, Default, Optimal
         ['Key'] = 'C';
@@ -12,10 +13,10 @@ getgenv()['Bindlua'] = {
         ['Univeral'] = '';
         ['NearestCursorHitpart'] = false;
         ['ClosestPart'] = false;
-        ['ShakeValue'] = 0;
+        ['ShakeValue'] = 1;
         ['Offset'] = {
             ['Mode'] = 'Advance';
-        }; 
+        };                                                                  
         ['CustomParts'] = {
             ['Enabled'] = false;
             ['Parts'] = 'Head';
@@ -25,7 +26,7 @@ getgenv()['Bindlua'] = {
             ['UseAirPart'] = false;
         };
         ['Adjusting'] = {
-            ['Smoothing'] = 0.009;
+            ['Smoothing'] = 0.9;
             ['Adjust'] = -0.15;
             ['CheckIfJumped'] = false;
         };
@@ -34,7 +35,12 @@ getgenv()['Bindlua'] = {
             ['PredictionY'] = 0.1255;
             ['PredictionX'] = 0.1255;
             ['Precision'] = 0.10;
-            ['HitChance'] = {false, 100};
+            ['HitChance'] = {false; 100};
+        };
+        ['AllowMorePrecision'] = {
+            ['Enabled'] = false;
+            ['Precision_Z'] = 0.50;
+            ['Precision_Y'] = 0.919;
         };
         ['Strategy'] = {
             ['Strategy'] = 'NONE';
@@ -44,6 +50,9 @@ getgenv()['Bindlua'] = {
             ['ShakeY'] = 0.1;
             ['ShakeX'] = 0.1;
             ['ShakeZ'] = 0.1;
+        };
+        ['Threading'] = {
+            ['Enabled'] = false;
         };
         ['Easing'] = {
             ['EasingStyleOut'] = 'Elastic';
@@ -98,6 +107,10 @@ getgenv()['Bindlua'] = {
             ['UseY'] = false;
             ['UseZ'] = false;
         };
+        ['Curving'] = {
+            ['Enabled'] = false;
+            ['Value'] = 1;
+        };
         ['CustomSmoothing'] = {
             ['UseCustomSmoothing'] = false;
             ['X'] = 0.2;
@@ -141,7 +154,14 @@ getgenv()['Bindlua'] = {
             ['UnlockOnTargetDeath'] = true;
             ['UnlockOnOwnDeath'] = true;
         };
-    },
+        ['Macro'] = {
+            ['Mode'] = 'Optimal'; -- Options: Optimized, Default, Optimal
+            ['Enabled'] = false;
+            ['Keybind'] = 'V';
+            ['Speed'] = 2;
+            ['Type'] = 'First'; --/ Third, First, Auto
+        };
+    };
     ['Triggerbot'] = {
         ['Main'] = {
             ['Global_Version'] = "V.01";
@@ -150,21 +170,21 @@ getgenv()['Bindlua'] = {
             ['Mode'] = 1;  -- 1 = Always On, 2 = Toggle, 3 = Hold
             ['LinkWithSilent'] = false;
             ['LinkWithCamlock'] = false;
-        },
+        };
         ['CustomKeyBind'] = {
             ['Mouse'] = "MouseButton2";
-        },
+        };
         ['Settings'] = {
             ['RadiusSettings'] = {
                 ['UseRange'] = false; 
                 ['Field'] = 100; 
                 ['AirshotRadius'] = 100;  
                 ['NearestPart'] = false;
-            },
+            };
             ['CustomIntervals'] = {
                 ['Enabled'] = false;
                 ['Range'] = 1;
-            },
+            };
             ['Resolving'] = {
                 ['Mode'] = '1'; --// 1 on always, 2 off
             };
@@ -200,29 +220,29 @@ getgenv()['Bindlua'] = {
                 ['Z'] = 15;
                 ['X'] = 15;
             };
-        },
+        };
         ['Config'] = {
             ['Regular'] = {
                 ['Prediction'] = 0;
                 ['Delay'] = 1000;
-                ['HitParts'] = {'Head', 'UpperTorso', 'HumanoidRootPart'};
-            },
+                ['HitParts'] = {'Head'; 'UpperTorso'; 'HumanoidRootPart'};
+            };
             ['Airshot'] = {
                 ['Enabled'] = true;
                 ['Prediction'] = 0;
                 ['Nearest'] = false;
-                ['HitParts'] = {'Head', 'UpperTorso', 'HumanoidRootPart'};
+                ['HitParts'] = {'Head'; 'UpperTorso'; 'HumanoidRootPart'};
                 ['Delay'] = 1000;
             };
-        },
+        };
         ['WhitelistedGuns'] = {
             '[Revolver]'; -- Hc guns Revolver, Glock, DoubleBarrel
             '[DoubleBarrel]';
             '[TacticalShotgun]';
             '[Shotgun]';
             '[Glock Silencer]';
-        };
-    },
+        }
+    };
     ['Hi'] = {
         ['Boolet'] = {
             ['Enabled'] = false;
@@ -318,10 +338,10 @@ getgenv()['Bindlua'] = {
             ['UseCircleRadius'] = false;
             ['CircleColor'] = Color3.fromRGB(50, 52, 168);
             ['CircleRadius'] = 100;
-            ['Tracer'] = false;
+            ['Tracer'] = true;
             ['TracerThickness'] = 1;
             ['TracerTransparency'] = 1;
-            ['TracerColor'] = Color3.fromRGB(50, 52, 168);
+            ['TracerColor'] = Color3.fromRGB(255, 255, 255);
         };
         ['Visuals'] = {
             ['Highlight'] = true;
