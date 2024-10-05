@@ -1,19 +1,20 @@
 script_key='';
 getgenv()['Bindlua'] = {
     ['Options'] = { 
+        ['Debug'] = true;
         ['IntroBlur'] = true;
         ['Notifications'] = true;
         ['AutoUpdate'] = true;
         ['Global'] = false;
     };
     ['Bind'] = {
-        ['Mode'] = 'Advance'; -- Options: Optimized, Default, Optimal
-        ['Key'] = 'C';
+        ['Mode'] = 'Optimal'; -- Options: Optimized, Default, Optimal
+        ['Key'] = 'Q';
         ['Point'] = false;
         ['Univeral'] = '';
         ['NearestCursorHitpart'] = false;
         ['ClosestPart'] = false;
-        ['ShakeValue'] = 1;
+        ['ShakeValue'] = 0;
         ['Offset'] = {
             ['Mode'] = 'Advance';
         };                                                                  
@@ -26,12 +27,12 @@ getgenv()['Bindlua'] = {
             ['UseAirPart'] = false;
         };
         ['Adjusting'] = {
-            ['Smoothing'] = 0.9;
+            ['Smoothing'] = 1;
             ['Adjust'] = -0.15;
             ['CheckIfJumped'] = false;
         };
         ['Advance'] = {
-            ['Part'] = 'Head';
+            ['Part'] = 'HumanoidRootPart';
             ['PredictionY'] = 0.1255;
             ['PredictionX'] = 0.1255;
             ['Precision'] = 0.10;
@@ -50,9 +51,6 @@ getgenv()['Bindlua'] = {
             ['ShakeY'] = 0.1;
             ['ShakeX'] = 0.1;
             ['ShakeZ'] = 0.1;
-        };
-        ['Threading'] = {
-            ['Enabled'] = false;
         };
         ['Easing'] = {
             ['EasingStyleOut'] = 'Elastic';
@@ -155,11 +153,10 @@ getgenv()['Bindlua'] = {
             ['UnlockOnOwnDeath'] = true;
         };
         ['Macro'] = {
-            ['Mode'] = 'Optimal'; -- Options: Optimized, Default, Optimal
             ['Enabled'] = false;
             ['Keybind'] = 'V';
             ['Speed'] = 2;
-            ['Type'] = 'First'; --/ Third, First, Auto
+            ['Type'] = 'Third'; --/ Third, First, Auto
         };
     };
     ['Triggerbot'] = {
@@ -307,7 +304,7 @@ getgenv()['Bindlua'] = {
             ["DistanceCheck"] = {false, 20};
         };
         ['Resolver'] = {
-            ['Enabled'] = false;
+            ['Enabled'] = true;
             ['Type'] = 'Delta';
             ['Threshold'] = 80;
             ['Tuning'] = 75;
@@ -361,5 +358,6 @@ getgenv()['Bindlua'] = {
          };
     };
 }
+
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/9493c4dcdf22ec14300ffc97ef060c4a.lua"))()
