@@ -9,7 +9,7 @@ getgenv()['Bindlua'] = {
     };
     ['Bind'] = {
         ['Mode'] = 'Optimal'; -- Options: Optimized, Default, Optimal
-        ['Key'] = 'Q';
+        ['Key'] = 'C';
         ['Point'] = false;
         ['Univeral'] = '';
         ['NearestCursorHitpart'] = false;
@@ -27,14 +27,14 @@ getgenv()['Bindlua'] = {
             ['UseAirPart'] = false;
         };
         ['Adjusting'] = {
-            ['Smoothing'] = 1;
-            ['Adjust'] = -0.15;
+            ['Smoothing'] = 0.006;
+            ['Adjust'] = -0.17;
             ['CheckIfJumped'] = false;
         };
         ['Advance'] = {
             ['Part'] = 'HumanoidRootPart';
-            ['PredictionY'] = 0.1255;
-            ['PredictionX'] = 0.1255;
+            ['PredictionY'] = 0.1266;
+            ['PredictionX'] = 0.1266;
             ['Precision'] = 0.10;
             ['HitChance'] = {false; 100};
         };
@@ -159,10 +159,169 @@ getgenv()['Bindlua'] = {
             ['Type'] = 'Third'; --/ Third, First, Auto
         };
     };
+    ['hojixv'] = { 
+        ['Silent'] = {
+            ['Mode'] = 'Optimal'; -- Options: Optimized, Default, Optimal
+            ['Enabled'] = true;
+            ['Point'] = false;
+            ['Univeral'] = '';
+        };
+        ['Parts'] = {
+            ['Part'] = "HumanoidRootPart";
+            ['AllowedParts'] = {"HumanoidRootPart"};
+        };
+        ['Predictions'] = {
+            ['Prediction'] = 0.1255;
+            ['HitChance'] = 100;
+        };
+        ['Binding'] = {
+            ['UseToggleKey'] = true;
+            ['ToggleKey'] = "P";
+        };
+        ['Nearest'] = {
+            ['ClosestPart'] = false;
+            ['NearestCursorHitpart'] = false;
+            ['CenterPart'] = false;
+            ['ClosetPoint'] = false;
+        };
+        ['AntiGroundShot'] = {
+            ['AntiGroundShot'] = false;
+            ['UseAntiGroundShot'] = false;
+            ['AntiGroundShotValue'] = 5;
+        };
+        ['Airing'] = {
+            ['UseAirPart'] = false;
+            ['AirPart'] = "Head";
+        };
+        ['UseCustomPrediction'] = true;
+        ['CustomPrediction'] = {
+            ['X'] = 0.1255;
+            ['Y'] = 0.1255;
+            ['Z'] = 0.1225;
+        };
+        ['AntiCurveV1'] = {
+            ['UseAntiCurve'] = false;
+            ['AntiCurveValue'] = 1;
+            ['UseAxis'] = false;
+            ['AxisY'] = 1;
+            ['AxisX'] = 1;
+        };
+        ['AirChance'] = {
+            ['UseAirChance'] = false;
+            ['Chance'] = 100;
+            ['AirShotHitChance'] = false;
+            ['CustomPower'] = 1;
+            ['Interval'] = 9;
+        };
+        ['SilentFOV'] = {
+            ['Visible'] = true;
+            ['Sticky'] = false;
+            ['Filled'] = false;
+            ['Radius'] = 400;
+            ['Center'] = false;
+            ['Transparency'] = 1;
+            ['Thickness'] = 1;
+            ['Color'] = Color3.fromRGB(255, 255, 255);
+            ['Type'] = "Mouse";
+        };
+        ['Factors'] = {
+            ['Factor'] = false;
+            ['Factors'] = 1;
+        };
+        ['SilentChecks'] = {
+            ['VisibleCheck'] = true;
+            ['CrewCheck'] = false;
+            ['FriendCheck'] = false;
+            ['TeamCheck'] = false;
+            ['VehicleCheck'] = false;
+            ['WallCheck'] = false;
+            ['CheckIf_KO'] = true;
+            ['UsingFactorCheck'] = false;
+            ['KoCheckTracer'] = false;
+        };
+        ['Intervals'] = {
+            ['UseIntervals'] = false;
+            ['Intervals'] = 0;
+        };
+        ['Scaling'] = {
+            ['ScaleWithPrediction'] = false;
+        };
+        ['Prediction_Points'] = {
+            ['Enabled'] = false;
+            ['InterLinked'] = false;
+            ['Normal'] = 0.11;
+        };
+        ['3D_Location'] = {
+            ['Enabled'] = false;
+            ['localHitPosition'] = Vector3.new(1, 0, 1);
+        };
+        ['CustomDetections'] = {
+            ['Enabled'] = false;
+            ['Close'] = 1;
+            ['Mid'] = 1;
+            ['Far'] = 1;
+        };
+        ['Properties'] = {
+            ['UseRangeCoefficient'] = false;
+            ['RangeCoefficient'] = 1;
+            ['PredictClose'] = false;
+            ['UseDetection'] = false;
+            ['UseCursorHitPart'] = false;
+        };
+        ['RangeCoefficient'] = {
+            ['UseRangeCoefficient'] = false;
+            ['Range'] = "Math";
+            ['Coefficient'] = 0;
+        };
+        ['Visible'] = {
+            ['UseVisibleTarget'] = false;
+            ['NearestCursor'] = false;
+        };
+        ['Resolver'] = {
+            ['Enabled'] = false;
+            ['For'] = "Both";
+            ['Type'] = "Delta"; -- MoveDirection
+            ['Threshold'] = 85;
+            ['Tuning'] = 0.2;
+    
+            ['CustomResolver'] = {
+                ['CustomResolver'] = false;
+                ['ResolverX'] = 0.1;
+                ['ResolverY'] = 0.1;
+                ['ResolverZ'] = 0.1;
+            };
+        };
+        ['Safety'] = {
+            ['UsePlaceIds'] = false;
+            ['Placeid'] = "";
+            ['Remote'] = "";
+    
+            ['LegitMode'] = false; -- blatant, legit, semilegit, semiblatant
+            ['Override'] = false;
+            ['OverrideAxis'] = false;
+            ['Y'] = 1;
+            ['X'] = 1;
+            ['Z'] = 1;
+    
+            ['UseKeyBinds'] = false;
+            ['UseSafeFov'] = false;
+        };
+        ['AntiCurveModule'] = {
+            ['UseAntiCurveV2'] = false;
+            ['UsePredictionPoints'] = false;
+            ['PredictionPoints'] = 5;
+            ['PointAdjustment'] = 0.1;
+        };
+        ['CustomAntiGroundShots'] = {
+            ['UseCustomNoGroundShots'] = false;
+            ['AntiGroundShot'] = 10;
+            ['Power'] = 1;
+        };
+    };
     ['Triggerbot'] = {
         ['Main'] = {
             ['Global_Version'] = "V.01";
-            ['Enabled'] = true;
+            ['Enabled'] = false;
             ['Keybind'] = 'P';
             ['Mode'] = 1;  -- 1 = Always On, 2 = Toggle, 3 = Hold
             ['LinkWithSilent'] = false;
@@ -201,8 +360,8 @@ getgenv()['Bindlua'] = {
                 ['Transparency'] = 1;
                 ['Thickness'] = 1;
                 ['Filled'] = false;
-                ['Line'] = true;
-                ['Color'] = Color3.fromRGB(255, 155, 255);
+                ['Line'] = false;
+                ['Color'] = Color3.fromRGB(255, 255, 255);
                 ['Box'] = false;
                 ['BoxSize'] = Vector3.new(5, 5, 5);
             };
@@ -222,13 +381,13 @@ getgenv()['Bindlua'] = {
             ['Regular'] = {
                 ['Prediction'] = 0;
                 ['Delay'] = 1000;
-                ['HitParts'] = {'Head'; 'UpperTorso'; 'HumanoidRootPart'};
+                ['HitParts'] = {'HumanoidRootPart'};
             };
             ['Airshot'] = {
                 ['Enabled'] = true;
                 ['Prediction'] = 0;
                 ['Nearest'] = false;
-                ['HitParts'] = {'Head'; 'UpperTorso'; 'HumanoidRootPart'};
+                ['HitParts'] = {'HumanoidRootPart'};
                 ['Delay'] = 1000;
             };
         };
@@ -278,7 +437,7 @@ getgenv()['Bindlua'] = {
         ['Config'] = {
             ['Key'] = 'Q';
             ['Part'] = 'HumanoidRootPart';
-            ['Prediction'] = 0.1255;
+            ['Prediction'] = 0.126666;
         };
         ['CustomPrediction'] = {
             ['UseCustomPrediction'] = true;
@@ -329,7 +488,7 @@ getgenv()['Bindlua'] = {
             ['Method'] = 'Fetch'; --// Fetch, Data, Auto
         };
         ['Drawings'] = {
-            ['Box'] = false;
+            ['Box'] = true;
             ['BoxSize'] = Vector3.new(5, 5, 5);
             ['Circle'] = false;
             ['UseCircleRadius'] = false;
@@ -338,13 +497,13 @@ getgenv()['Bindlua'] = {
             ['Tracer'] = true;
             ['TracerThickness'] = 1;
             ['TracerTransparency'] = 1;
-            ['TracerColor'] = Color3.fromRGB(255, 255, 255);
+            ['TracerColor'] = Color3.fromRGB(50, 52, 168);
         };
         ['Visuals'] = {
             ['Highlight'] = true;
             ['HighlightRainbow'] = false;
-            ['HighlightFillColor'] = Color3.fromRGB(255, 255, 255);
-            ['HighlightOutlineColor'] = Color3.fromRGB(255, 255, 255);
+            ['HighlightFillColor'] = Color3.fromRGB(50, 52, 168);
+            ['HighlightOutlineColor'] = Color3.fromRGB(50, 52, 168);
         };
         ['Misc'] = {
             ['Change'] = true;
@@ -358,6 +517,5 @@ getgenv()['Bindlua'] = {
          };
     };
 }
-
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/9493c4dcdf22ec14300ffc97ef060c4a.lua"))()
