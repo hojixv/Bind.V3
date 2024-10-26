@@ -152,12 +152,6 @@ getgenv()['Bindlua'] = {
             ['UnlockOnTargetDeath'] = true;
             ['UnlockOnOwnDeath'] = true;
         };
-        ['Macro'] = {
-            ['Enabled'] = false;
-            ['Keybind'] = 'V';
-            ['Speed'] = 2;
-            ['Type'] = 'Third'; --/ Third, First, Auto
-        };
     };
     ['hojixv'] = { 
         ['Silent'] = {
