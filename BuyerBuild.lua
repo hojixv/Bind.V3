@@ -17,7 +17,7 @@ getgenv()['Bindlua'] = {
         ['ShakeValue'] = 0;
         ['Offset'] = {
             ['Mode'] = 'Advance';
-        };                                                                  
+        };                                                                   
         ['CustomParts'] = {
             ['Enabled'] = false;
             ['Parts'] = 'Head';
@@ -27,14 +27,14 @@ getgenv()['Bindlua'] = {
             ['UseAirPart'] = false;
         };
         ['Adjusting'] = {
-            ['Smoothing'] = 0.006;
+            ['Smoothing'] = 0.35;
             ['Adjust'] = -0.17;
             ['CheckIfJumped'] = false;
         };
         ['Advance'] = {
             ['Part'] = 'HumanoidRootPart';
-            ['PredictionY'] = 0.1266;
-            ['PredictionX'] = 0.1266;
+            ['PredictionY'] = 0.1255;
+            ['PredictionX'] = 0.1255;
             ['Precision'] = 0.10;
             ['HitChance'] = {false; 100};
         };
@@ -152,44 +152,46 @@ getgenv()['Bindlua'] = {
             ['UnlockOnTargetDeath'] = true;
             ['UnlockOnOwnDeath'] = true;
         };
+        ['Macro'] = {
+            ['Enabled'] = false;
+            ['Keybind'] = 'V';
+            ['Speed'] = 2;
+            ['Type'] = 'Third'; --/ Third, First, Auto
+        };
     };
-    ['hojixv'] = { 
+    ['hojixv'] = {
         ['Silent'] = {
-            ['Mode'] = 'Optimal'; -- Options: Optimized, Default, Optimal
             ['Enabled'] = true;
-            ['Point'] = false;
-            ['Univeral'] = '';
+            ['Mode'] = 'Advance';
+            ['Executer'] = 'Wave'; 
+            ['Type'] = 'Default';
+            ['Support'] = 1;
         };
-        ['Parts'] = {
-            ['Part'] = "HumanoidRootPart";
-            ['AllowedParts'] = {"HumanoidRootPart"};
-        };
-        ['Predictions'] = {
-            ['Prediction'] = 0.1255;
-            ['HitChance'] = 100;
-        };
-        ['Binding'] = {
-            ['UseToggleKey'] = true;
-            ['ToggleKey'] = "P";
-        };
-        ['Nearest'] = {
+        ['Points'] = {
             ['ClosestPart'] = false;
-            ['NearestCursorHitpart'] = false;
             ['CenterPart'] = false;
             ['ClosetPoint'] = false;
         };
-        ['AntiGroundShot'] = {
-            ['AntiGroundShot'] = false;
-            ['UseAntiGroundShot'] = false;
-            ['AntiGroundShotValue'] = 5;
+        ['CustomParts'] = {
+            ['AllowCustomParts'] = false;
+            ['CustomParts'] = {'HumanoidRootPart'};
         };
-        ['Airing'] = {
+        ['Air'] = {
             ['UseAirPart'] = false;
-            ['AirPart'] = "Head";
+            ['AirPart'] = 'Head';
+        };
+        ['Binding'] = {
+            ['UseToggleKey'] = true;
+            ['ToggleKey'] = 'p';
+        };
+        ['Config'] = {
+            ['Prediction'] = 0.1255;
+            ['HitChance'] = 100;
+            ['Part'] = 'HumanoidRootPart';
         };
         ['UseCustomPrediction'] = true;
         ['CustomPrediction'] = {
-            ['X'] = 0.1255;
+            ['X'] = 0.125;
             ['Y'] = 0.1255;
             ['Z'] = 0.1225;
         };
@@ -200,6 +202,16 @@ getgenv()['Bindlua'] = {
             ['AxisY'] = 1;
             ['AxisX'] = 1;
         };
+        ['Factors'] = {
+            ['FactorsEnabled'] = false;
+            ['FactorZ'] = 1;
+        };
+        ['Tracer'] = {
+            ['UseTracer'] = false;
+            ['Rainbow'] = false;
+            ['Dots'] = false;
+            ['TracerColor'] = Color3.fromRGB(0, 0, 255);
+        };
         ['AirChance'] = {
             ['UseAirChance'] = false;
             ['Chance'] = 100;
@@ -207,23 +219,36 @@ getgenv()['Bindlua'] = {
             ['CustomPower'] = 1;
             ['Interval'] = 9;
         };
+        ['AutoPrediction'] = {
+            ['AutoPrediction'] = false;
+            ['Ping'] = 'Auto';
+        };
+        ['CustomBoxTargets'] = {
+            ['UseBoxTargets'] = false;
+            ['FollowBox'] = false;
+            ['BoxTargetPrediction'] = 0.15;
+        };
+        ['Dynamic'] = {
+            ['LeftRange'] = 10;
+            ['RightRange'] = 10;
+            ['UniversalRange'] = 1;
+            ['Y_Range'] = 1;
+            ['X_Range'] = 1;
+            ['Z_Range'] = 1;
+        };
         ['SilentFOV'] = {
             ['Visible'] = true;
             ['Sticky'] = false;
             ['Filled'] = false;
-            ['Radius'] = 400;
+            ['Radius'] = 500;
             ['Center'] = false;
-            ['Transparency'] = 1;
+            ['Transparency'] = 0.3;
             ['Thickness'] = 1;
             ['Color'] = Color3.fromRGB(255, 255, 255);
-            ['Type'] = "Mouse";
-        };
-        ['Factors'] = {
-            ['Factor'] = false;
-            ['Factors'] = 1;
+            ['Type'] = 'Mouse';
         };
         ['SilentChecks'] = {
-            ['VisibleCheck'] = true;
+            ['VisibleCheck'] = false;
             ['CrewCheck'] = false;
             ['FriendCheck'] = false;
             ['TeamCheck'] = false;
@@ -255,26 +280,25 @@ getgenv()['Bindlua'] = {
             ['Mid'] = 1;
             ['Far'] = 1;
         };
-        ['Properties'] = {
-            ['UseRangeCoefficient'] = false;
-            ['RangeCoefficient'] = 1;
-            ['PredictClose'] = false;
-            ['UseDetection'] = false;
-            ['UseCursorHitPart'] = false;
-        };
         ['RangeCoefficient'] = {
             ['UseRangeCoefficient'] = false;
-            ['Range'] = "Math";
+            ['Range'] = 'Math';
             ['Coefficient'] = 0;
         };
         ['Visible'] = {
             ['UseVisibleTarget'] = false;
             ['NearestCursor'] = false;
         };
+        ['Conditions'] = {
+            ['FormulaType'] = 'S';
+            ['AutoDetection'] = false;
+            ['UseAutoDetection'] = true;
+            ['ManualDetection'] = 50;
+        };
         ['Resolver'] = {
-            ['Enabled'] = false;
-            ['For'] = "Both";
-            ['Type'] = "Delta"; -- MoveDirection
+            ['Enabled'] = true;
+            ['For'] = 'Silent';
+            ['Type'] = 'Delta'; -- MoveDirection
             ['Threshold'] = 85;
             ['Tuning'] = 0.2;
     
@@ -285,37 +309,39 @@ getgenv()['Bindlua'] = {
                 ['ResolverZ'] = 0.1;
             };
         };
-        ['Safety'] = {
-            ['UsePlaceIds'] = false;
-            ['Placeid'] = "";
-            ['Remote'] = "";
-    
-            ['LegitMode'] = false; -- blatant, legit, semilegit, semiblatant
-            ['Override'] = false;
-            ['OverrideAxis'] = false;
-            ['Y'] = 1;
-            ['X'] = 1;
-            ['Z'] = 1;
-    
-            ['UseKeyBinds'] = false;
-            ['UseSafeFov'] = false;
-        };
         ['AntiCurveModule'] = {
             ['UseAntiCurveV2'] = false;
             ['UsePredictionPoints'] = false;
             ['PredictionPoints'] = 5;
             ['PointAdjustment'] = 0.1;
         };
+        ['CustomAngles'] = {
+            ['ConerScale'] = 0;
+            ['Use3dAngles'] = false;
+            ['Power'] = 1;
+        };
+        ['AirPoint'] = {
+            ['UseAirPoints'] = false;
+            ['AirPoints'] = 1;
+        };
         ['CustomAntiGroundShots'] = {
             ['UseCustomNoGroundShots'] = false;
             ['AntiGroundShot'] = 10;
             ['Power'] = 1;
         };
-    };
+        ['GlobalV2'] = {
+            ['UseSafeMode'] = false;
+            ['SelfDetection'] = false;
+        };
+        ['UnSafeV2'] = {
+            ['AllowArgs'] = false;
+            ['UseKickId'] = true; -- kicks on ids we dont use
+        };
+    }; 
     ['Triggerbot'] = {
         ['Main'] = {
             ['Global_Version'] = "V.01";
-            ['Enabled'] = false;
+            ['Enabled'] = true;
             ['Keybind'] = 'P';
             ['Mode'] = 1;  -- 1 = Always On, 2 = Toggle, 3 = Hold
             ['LinkWithSilent'] = false;
@@ -354,8 +380,8 @@ getgenv()['Bindlua'] = {
                 ['Transparency'] = 1;
                 ['Thickness'] = 1;
                 ['Filled'] = false;
-                ['Line'] = false;
-                ['Color'] = Color3.fromRGB(255, 255, 255);
+                ['Line'] = true;
+                ['Color'] = Color3.fromRGB(255, 155, 255);
                 ['Box'] = false;
                 ['BoxSize'] = Vector3.new(5, 5, 5);
             };
@@ -393,123 +419,6 @@ getgenv()['Bindlua'] = {
             '[Glock Silencer]';
         }
     };
-    ['Hi'] = {
-        ['Boolet'] = {
-            ['Enabled'] = false;
-            ['Keybind'] = 'Q';  -- When you see the dot, it means the boolet TP is working
-            ['Method'] = 'GP';  -- Gp, Cframe, ASyncing, Tool ( Gp IS not Grip Pos )
-            ['Argument'] = 'UpdateMousePosI2'; -- Leave blank if you don’t know what this means, it will auto-detect but some games aren't detected
-        },
-        ['Dot'] = {
-            ['Enabled'] = true;
-            ['Size'] = 10;
-            ['OffsetY'] = 5;
-        },
-        ['Mode'] = {
-            ['Tool'] = 'lerp'; -- Cframe, Lerp
-            ['Amount'] = 0.19;
-        },
-        ['Targeting'] = {
-            ['Method'] = 'Update'; -- Key, Update
-        },
-        ['Target'] = {
-            ['Enabled'] = true;
-            ['Point'] = false;
-            ['Lookat'] = false;
-            ['Spectate'] = false;
-        }; 
-        ['GamePoint'] = {
-            ['Enabled'] = false,
-        };
-        ['Offset'] = {
-            ['Mode'] = 'Advance';
-        };
-        ['Air'] = {
-            ['UseAirPart'] = false;
-            ['AirPart'] = 'Head';
-        };
-        ['Config'] = {
-            ['Key'] = 'Q';
-            ['Part'] = 'HumanoidRootPart';
-            ['Prediction'] = 0.126666;
-        };
-        ['CustomPrediction'] = {
-            ['UseCustomPrediction'] = true;
-            ['Values'] = {
-                ['X'] = 0.1255;
-                ['Y'] = 0.1255;
-                ['Z'] = 0.1255;
-            };
-        };
-        ['AirPrediction'] = {
-            ['Enabled'] = false;
-            ['AirY'] = 0.12;
-            ['AirZ'] = 0.12;
-            ['AirX'] = 0.12;
-        };
-        ['Checks'] = {
-            ['KoCheck'] = false;
-            ['VisibleCheck'] = false;
-            ['Wall'] = false;
-            ['VehicleCheck'] = false;
-            ["CrewCheck"] = false;
-            ["TeamCheck"] = false;
-            ["DistanceCheck"] = {false, 20};
-        };
-        ['Resolver'] = {
-            ['Enabled'] = true;
-            ['Type'] = 'Delta';
-            ['Threshold'] = 80;
-            ['Tuning'] = 75;
-        };
-        ['CustomResolver'] = {
-            ['Enabled'] = false;
-            ['Y'] = 1;
-            ['Z'] = 1;
-            ['X'] = 1;
-        };
-        ['Extra'] = {
-            ['Stats'] = false;
-            ['Self'] = false;
-            ['Misc'] = true;
-        };
-        ['CustomBox'] = {
-            ['Enabled'] = false;
-            ['Color'] = Color3.fromRGB(50, 52, 168);
-        };
-        ['AutoPrediction'] = {
-            ['Enabled'] = false;
-            ['Method'] = 'Fetch'; --// Fetch, Data, Auto
-        };
-        ['Drawings'] = {
-            ['Box'] = true;
-            ['BoxSize'] = Vector3.new(5, 5, 5);
-            ['Circle'] = false;
-            ['UseCircleRadius'] = false;
-            ['CircleColor'] = Color3.fromRGB(50, 52, 168);
-            ['CircleRadius'] = 100;
-            ['Tracer'] = true;
-            ['TracerThickness'] = 1;
-            ['TracerTransparency'] = 1;
-            ['TracerColor'] = Color3.fromRGB(50, 52, 168);
-        };
-        ['Visuals'] = {
-            ['Highlight'] = true;
-            ['HighlightRainbow'] = false;
-            ['HighlightFillColor'] = Color3.fromRGB(50, 52, 168);
-            ['HighlightOutlineColor'] = Color3.fromRGB(50, 52, 168);
-        };
-        ['Misc'] = {
-            ['Change'] = true;
-            ['CoolDown'] = true;
-            ['UpdateTable'] = true;
-        };
-        ['Global'] = {
-            ['KillPoints'] = false;
-            ['Global_Resolver'] = false;
-            ['Resolver_Key'] = 'V';
-         };
-    };
-}
+} 
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/9493c4dcdf22ec14300ffc97ef060c4a.lua"))()
